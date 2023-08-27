@@ -1,0 +1,9 @@
+.incoming-svg {
+    color: #262d31;
+    transform: scaleX(-1);
+  }
+
+.outgoing-svg{
+    color: #262d31;
+    /* transform: scaleY(-1); */
+}
