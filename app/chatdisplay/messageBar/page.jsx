@@ -5,7 +5,7 @@ import { grey } from "@mui/material/colors";
 import AttachFileOutlinedIcon from "@mui/icons-material/AttachFileOutlined";
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 
-export default function MessageBar() {
+const MessageBar = () => {
   return (
     <div className=" h-15 bg-panel-header-background py-4 flex items-center gap-4 relative">
         <div className="flex gap-2">
@@ -30,3 +30,5 @@ export default function MessageBar() {
     </div>
   );
 }
+
+export default MessageBar;

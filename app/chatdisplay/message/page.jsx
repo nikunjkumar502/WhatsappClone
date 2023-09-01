@@ -2,7 +2,7 @@ import React from "react";
 import DoneAllIcon from "@mui/icons-material/DoneAll";
 import "./styles.modules.css";
 
-function MessageTail({svgType}) {
+const MessageTail = ({svgType}) => {
   return (
     <span>
       <svg

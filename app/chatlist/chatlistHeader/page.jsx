@@ -6,7 +6,7 @@ import GroupsIcon from "@mui/icons-material/Groups";
 import { grey } from "@mui/material/colors";
 import WifiTetheringIcon from '@mui/icons-material/WifiTethering';
 
-export default function ChatListHeader() {
+const ChatListHeader = () => {
   return (
     <div className="max-w-screen w-full h-15 px-1 py-1 flex justify-between items-center bg-panel-header-background">
       <div className="cursor-pointer ml-3">
@@ -29,3 +29,5 @@ export default function ChatListHeader() {
     </div>
   );
 }
+
+export default ChatListHeader;

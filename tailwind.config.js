@@ -20,14 +20,10 @@ export const theme = {
       "primary-strong": "#e9edef",
       "secondary-strong": "#8696a0",
       "border-strong": "rgba(134,150,160,0.15)",
-      // "incoming-svg": "#262d31"
     },
     gridTemplateColumns: {
       main: "1fr 2.4fr",
     },
-    // tail:{
-    //     transform: scaleX(-1)
-    // }
   },
 };
 export const plugins = [];

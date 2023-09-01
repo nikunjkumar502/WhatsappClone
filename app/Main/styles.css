@@ -1,0 +1,10 @@
+/* Mobile View */
+
+@media (max-width: 480px) {
+    .hide-display {
+      display: none;
+    }
+    .show-display {
+      width: inherit;
+    }
+  }
