@@ -1,24 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Avatar } from "@mui/material";
 import Brightness1Icon from "@mui/icons-material/Brightness1";
-import { grey } from "@mui/material/colors";
 
-export default function List(props) {
-  const [selectedItem, setSelectedItem] = useState(null);
-
-  const handleItemClick = (itemId) => {
-    const updatedData = props.data.map((item) =>
-      item.id === itemId ? { ...item, status: "Read" } : item
-    );
-
-    // props.setdata(updatedData);
-
-    if (selectedItem === itemId) {
-      setSelectedItem(null);
-    } else {
-      setSelectedItem(itemId);
-    }
-  };
+ const List = ({data, selectedItem, onItemClick}) => {
 
   const formatDate = (date) => {
     const today = new Date();
@@ -37,15 +21,15 @@ export default function List(props) {
   return (
     <div className="bg-search-input-container-background flex flex-col overflow-hidden max-w-full max-h-full h-18 relative ">
       <div className="flex flex-col overflow-y-auto">
-        {props.data.map((item) => (
+      {data.map((item) => (
           <div
             key={item.id}
-            className={`flex items-center w-full pt-0  mr-2 pb-2 cursor-pointer mb-1 hover:bg-panel-header-background ${
+            className={`flex items-center w-full pt-0 pb-2 cursor-pointer mb-1 hover:bg-panel-header-background ${
               selectedItem === item.id
                 ? "bg-panel-header-background border-panel-header-background"
                 : ""
             }`}
-            onClick={() => handleItemClick(item.id)}
+            onClick={() => onItemClick(item.id)}
           >
             <div className="pr-4 pl-3 ml--1">
               <Avatar
@@ -55,8 +39,8 @@ export default function List(props) {
               />
             </div>
             {item.status === "Read" ? (
-              <div className="flex flex-col max-w-2xl pt-2 w-full border-t border-solid border-border-strong">
-                <div className="flex flex-row w-full justify-between ">
+              <div className="flex flex-col max-w-xl pt-2 w-full border-t border-solid border-border-strong">
+                <div className="flex flex-row justify-between ">
                   <div
                     className={`font-light text-[#e9edef] text-lg overflow-wrap break-words`}
                   >
@@ -109,3 +93,5 @@ export default function List(props) {
     </div>
   );
 }
+
+export default List;

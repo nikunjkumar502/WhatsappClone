@@ -1,9 +1,10 @@
 import Main from "./main/page";
 
-export default function Home() {
+ const Home = () => {
   return (
     <main>
       <Main />
     </main>
   );
 }
+export default Home;
